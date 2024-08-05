@@ -6,3 +6,4 @@ myvenv
 /static
 .DS_Store
 secrets.json
+seniorcare.pem

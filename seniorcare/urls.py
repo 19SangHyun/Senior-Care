@@ -8,4 +8,5 @@ urlpatterns = [
     path('chatcomp', views.chatgpt_completion, name='chatgpt_completion'),
     path('opentts', views.open_tts, name='open_tts'),
     path('openvision', views.open_vision, name='open_vision'),
+    path('health/', views.health_check, name='health_check'),
 ]

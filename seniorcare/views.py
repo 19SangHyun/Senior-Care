@@ -380,3 +380,6 @@ def open_vision(request):
         form = UploadFileForm()
     return render(request, 'fileupload/whisper_file_upload.html', {'form': form})
 
+
+def health_check(request):
+    return HttpResponse("OK", status=200)
