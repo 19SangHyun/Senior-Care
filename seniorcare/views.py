@@ -381,5 +381,6 @@ def open_vision(request):
     return render(request, 'fileupload/whisper_file_upload.html', {'form': form})
 
 
+@csrf_exempt
 def health_check(request):
     return HttpResponse("OK", status=200)
