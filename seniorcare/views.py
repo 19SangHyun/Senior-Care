@@ -149,7 +149,7 @@ def upload_and_transcribe(request):
             return HttpResponse(transcript, content_type="text/plain")
     else:
         form = UploadFileForm()
-    return render(request, 'fileupload/whisper_file_upload.html', {'form': form})
+    return JsonResponse({'error': 'Only POST method is supported'}, status=405)
 
 
 
@@ -276,7 +276,7 @@ def open_tts(request):
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
     
-    return JsonResponse({'error': 'Invalid request method.'}, status=405)
+    return JsonResponse({'error': 'Only POST method is supported'}, status=405)
 
 
 
@@ -378,7 +378,7 @@ def open_vision(request):
             return HttpResponse(transcript, content_type="text/plain")
     else:
         form = UploadFileForm()
-    return render(request, 'fileupload/whisper_file_upload.html', {'form': form})
+    return JsonResponse({'error': 'Only POST method is supported'}, status=405)
 
 
 @csrf_exempt
