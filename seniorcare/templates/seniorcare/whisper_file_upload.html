@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Whisper file upload</title>
+</head>
+<body>
+    <h1>Whisper STT</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Upload and Transcribe</button>
+    </form>
+</body>
+</html>
